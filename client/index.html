@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retail Order Management System</title>
+    <link rel="icon" type="image/x-icon" href="image/icon.png" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Login/Register Section -->
+    <div id="auth-section" class="auth-container" style="display: flex !important; visibility: visible !important;">
+        <div class="auth-box">
+            <h1>Retail Order Management System</h1>
+            
+            <!-- Login Form -->
+            <div id="login-form-container" class="form-container active">
+                <h2>Login</h2>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="login-email">Email:</label>
+                        <input type="email" id="login-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password:</label>
+                        <input type="password" id="login-password" required>
+                    </div>
+                    <button type="submit" class="btn-primary">Login</button>
+                </form>
+                <p>Don't have an account? <a href="javascript:void(0);" onclick="switchForms()">Register here</a></p>
+            </div>
+
+            <!-- Register Form -->
+            <div id="register-form-container" class="form-container">
+                <h2>Register</h2>
+                <form id="register-form">
+                    <div class="form-group">
+                        <label for="register-fullname">Full Name:</label>
+                        <input type="text" id="register-fullname" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-email">Email:</label>
+                        <input type="email" id="register-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">Password:</label>
+                        <input type="password" id="register-password" required>
+                    </div>
+                    <button type="submit" class="btn-primary">Register</button>
+                </form>
+                <p>Already have an account? <a href="javascript:void(0);" onclick="switchForms()">Login here</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Application Section -->
+    <div id="main-section" style="display: none !important; visibility: hidden !important;">
+        <div class="container">
+            <div class="header">
+                <h1>Retail Order Management System</h1>
+                <div class="user-info">
+                    <span id="user-name"></span>
+                    <button id="logout-btn" class="btn-logout">Logout</button>
+                </div>
+            </div>
+            
+            <div class="sections">
+                <section id="products-section">
+                    <h2>Available Products</h2>
+                    <div id="products-list" class="grid-container"></div>
+                </section>
+                
+                <section id="order-section">
+                    <h2>Place Order</h2>
+                    <form id="order-form">
+                        <div class="form-group">
+                            <label for="product-select">Product:</label>
+                            <select id="product-select" required></select>
+                        </div>
+                        <div class="form-group">
+                            <label for="customer-name">Your Name:</label>
+                            <input type="text" id="customer-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="quantity">Quantity:</label>
+                            <input type="number" id="quantity" min="1" value="1" required>
+                        </div>
+                        <button type="submit">Place Order</button>
+                    </form>
+                </section>
+                
+                <section id="orders-section">
+                    <h2>Your Orders</h2>
+                    <button id="refresh-orders">Refresh Orders</button>
+                    <div id="orders-list"></div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
