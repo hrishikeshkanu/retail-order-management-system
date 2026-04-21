@@ -34,6 +34,10 @@ Developed as an academic project at the **Institute of Information Technology (I
 **Database:**
 * MongoDB Atlas (Cloud NoSQL Database)
 
+## 📖 Documentation
+
+For a visual demonstration and detailed user manual, refer to [manual.pdf](manual.pdf).
+
 ## ⚙️ Installation & Setup
 
 ### Prerequisites
